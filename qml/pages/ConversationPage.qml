@@ -369,7 +369,7 @@ Page {
                 left: parent.left
                 leftMargin: Theme.paddingMedium
             }
-            icon.source: "image://theme/icon-s-warning?"
+            icon.source: "image://theme/icon-s-high-importance?"
                          + (pressed ? Theme.highlightColor : (warningContent.visible ? Theme.secondaryHighlightColor : Theme.primaryColor))
             onClicked: warningContent.visible = !warningContent.visible
         }
@@ -445,7 +445,7 @@ Page {
 
         IconButton {
             id: btnSend
-            icon.source: "image://theme/icon-m-send?"
+            icon.source: "image://theme/icon-m-message?"
                          + (pressed ? Theme.highlightColor : Theme.primaryColor)
             anchors {
                 top: toot.bottom

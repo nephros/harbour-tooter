@@ -55,7 +55,7 @@ Page {
                     color: Theme.highlightColor
                     width: Theme.iconSizeMedium
                     fillMode: Image.PreserveAspectFit
-                    source: Logic.conf['login'] ? "image://theme/icon-m-contact" : "image://theme/icon-m-add"
+                    source: Logic.conf['login'] ? "image://theme/icon-m-person" : "image://theme/icon-m-add"
                     anchors.right: parent.right
                 }
 
@@ -196,7 +196,7 @@ Page {
 
                         IconButton {
                             id: btn
-                            icon.source: "image://theme/" + (model.mastodon !== "" ? "icon-m-outline-chat" : "icon-m-mail") + "?" + (pressed
+                            icon.source: "image://theme/" + (model.mastodon !== "" ? "icon-m-message" : "icon-m-mail") + "?" + (pressed
                                                                                                                                      ? Theme.highlightColor                                                                                                                                : Theme.primaryColor)
                             anchors {
                                 verticalCenter: parent.verticalCenter

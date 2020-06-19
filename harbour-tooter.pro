@@ -71,10 +71,10 @@ DISTFILES += qml/harbour-tooter.qml \
     qml/cover/CoverPage.qml \
     qml/pages/MainPage.qml \
     qml/pages/LoginPage.qml \
-    qml/pages/components/Toot.qml \
     qml/pages/Browser.qml \
     qml/lib/API.js \
     qml/images/icon-s-following \
+    qml/images/icon-s-bookmark \
     qml/images/icon-m-emoji.svg \
     qml/images/icon-m-profile.svg \
     qml/images/icon-l-profile.svg \

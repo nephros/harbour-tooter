@@ -24,6 +24,7 @@
     <name>ConversationPage</name>
     <message>
         <source>Copy Link to Clipboard</source>
+        <extracomment>Use the translation of &quot;Copy Link&quot; for a shorter PullDownMenu label</extracomment>
         <translation>Copy Link to Clipboard</translation>
     </message>
     <message>
@@ -57,6 +58,15 @@
     <message>
         <source>Toot sent!</source>
         <translation>Toot sent!</translation>
+    </message>
+    <message>
+        <source>Reply</source>
+        <extracomment>&quot;Reply&quot; will show the Toot text entry Panel. &quot;Hide Reply&quot; closes it. Alternative: Use &quot;Close Reply&quot;</extracomment>
+        <translation>Reply</translation>
+    </message>
+    <message>
+        <source>Hide Reply</source>
+        <translation>Hide Reply</translation>
     </message>
 </context>
 <context>
@@ -189,6 +199,14 @@
         <source>Bot</source>
         <translation>Bot</translation>
     </message>
+    <message>
+        <source>Follows you</source>
+        <translation>Follows you</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation>Group</translation>
+    </message>
 </context>
 <context>
     <name>ProfilePage</name>
@@ -300,6 +318,7 @@
     </message>
     <message>
         <source>Credits</source>
+        <extracomment>Translation alternative: &quot;Development&quot;</extracomment>
         <translation>Credits</translation>
     </message>
     <message>
@@ -331,10 +350,6 @@
         <translation>Spanish translation</translation>
     </message>
     <message>
-        <source>Added README file</source>
-        <translation>Added README file</translation>
-    </message>
-    <message>
         <source>Use</source>
         <extracomment>Full sentence for translation: &quot;Use Transifex to help with app translation to your language.&quot; - The word Transifex is a link and doesn&apos;t need translation.</extracomment>
         <translation>Use</translation>
@@ -342,21 +357,6 @@
     <message>
         <source>to help with app translation to your language.</source>
         <translation>to help with app translation to your language.</translation>
-    </message>
-</context>
-<context>
-    <name>Toot</name>
-    <message>
-        <source>boosted</source>
-        <translation>boosted</translation>
-    </message>
-    <message>
-        <source>favourited</source>
-        <translation>favourited</translation>
-    </message>
-    <message>
-        <source>followed you</source>
-        <translation>followed you</translation>
     </message>
 </context>
 <context>
@@ -380,6 +380,18 @@
     <message>
         <source>Mention</source>
         <translation>Mention</translation>
+    </message>
+    <message>
+        <source>Conversation</source>
+        <translation>Conversation</translation>
+    </message>
+    <message>
+        <source>Remove Bookmark</source>
+        <translation>Remove Bookmark</translation>
+    </message>
+    <message>
+        <source>Bookmark</source>
+        <translation>Bookmark</translation>
     </message>
 </context>
 </TS>

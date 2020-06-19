@@ -24,6 +24,7 @@
     <name>ConversationPage</name>
     <message>
         <source>Copy Link to Clipboard</source>
+        <extracomment>Use the translation of &quot;Copy Link&quot; for a shorter PullDownMenu label</extracomment>
         <translation>复制链接到剪切板</translation>
     </message>
     <message>
@@ -57,6 +58,15 @@
     <message>
         <source>Toot sent!</source>
         <translation>已发送嘟嘟！</translation>
+    </message>
+    <message>
+        <source>Reply</source>
+        <extracomment>&quot;Reply&quot; will show the Toot text entry Panel. &quot;Hide Reply&quot; closes it. Alternative: Use &quot;Close Reply&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide Reply</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -189,6 +199,14 @@
         <source>Bot</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Follows you</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ProfilePage</name>
@@ -300,6 +318,7 @@
     </message>
     <message>
         <source>Credits</source>
+        <extracomment>Translation alternative: &quot;Development&quot;</extracomment>
         <translation>信誉</translation>
     </message>
     <message>
@@ -331,10 +350,6 @@
         <translation>西班牙语翻译</translation>
     </message>
     <message>
-        <source>Added README file</source>
-        <translation>添加 README 文件</translation>
-    </message>
-    <message>
         <source>Use</source>
         <extracomment>Full sentence for translation: &quot;Use Transifex to help with app translation to your language.&quot; - The word Transifex is a link and doesn&apos;t need translation.</extracomment>
         <translation type="unfinished"></translation>
@@ -342,21 +357,6 @@
     <message>
         <source>to help with app translation to your language.</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Toot</name>
-    <message>
-        <source>boosted</source>
-        <translation>推起</translation>
-    </message>
-    <message>
-        <source>favourited</source>
-        <translation>收藏</translation>
-    </message>
-    <message>
-        <source>followed you</source>
-        <translation>关注你</translation>
     </message>
 </context>
 <context>
@@ -379,6 +379,18 @@
     </message>
     <message>
         <source>Mention</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Conversation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove Bookmark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

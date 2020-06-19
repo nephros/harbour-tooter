@@ -31,14 +31,13 @@ Page {
                 text: qsTr("Load Images in Toots")
                 description: qsTr("Disable this option if you want to preserve your data connection")
                 icon.source: "image://theme/icon-m-image"
-                enabled: true
                 checked: typeof Logic.conf['loadImages'] !== "undefined" && Logic.conf['loadImages']
                 onClicked: {
                     Logic.conf['loadImages'] = checked
                 }
             }
 
-            SectionHeader { text: qsTr("Account")}
+            SectionHeader { text: qsTr("Account") }
 
             Item {
                 id: removeAccount
@@ -71,7 +70,7 @@ Page {
                     Button {
                         id: btnRemoveAccount
                         text: Logic.conf['login'] ? qsTr("Remove Account") : qsTr("Add Account")
-                        width: Theme.buttonWidthMedium
+                        preferredWidth: Theme.buttonWidthMedium
                         anchors.horizontalCenter: parent.horizontalCenter
                         onClicked: {
                             remorsePopup.execute(btnRemoveAccount.text, function() {
@@ -97,11 +96,8 @@ Page {
                         font.pixelSize: Theme.fontSizeExtraSmall
                         wrapMode: Text.Wrap
                         color: Theme.highlightColor
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                            rightMargin: Theme.paddingLarge + icnRemoveAccount
-                        }
+                        width: parent.width - Theme.paddingMedium
+                        anchors.left: parent.left
                     }
                 }
             }
@@ -129,6 +125,7 @@ Page {
             }
 
             SectionHeader {
+                //: Translation alternative: "Development"
                 text:  qsTr("Credits")
             }
 
@@ -151,17 +148,17 @@ Page {
                         }
 
                         ListElement {
-                            name: "Miodrag Nikolić"
-                            desc: qsTr("Visual identity")
-                            mastodon: ""
-                            mail: "micotakis@gmail.com"
-                        }
-
-                        ListElement {
                             name: "Molan"
                             desc: qsTr("Development and translations")
                             mastodon: "molan@fosstodon.org"
                             mail: ""
+                        }
+
+                        ListElement {
+                            name: "Miodrag Nikolić"
+                            desc: qsTr("Visual identity")
+                            mastodon: ""
+                            mail: "micotakis@gmail.com"
                         }
 
                         ListElement {
@@ -191,13 +188,6 @@ Page {
                             mastodon: ""
                             mail: ""
                         }
-
-                        ListElement {
-                            name: "Mohamed-Touhami MAHDI"
-                            desc: qsTr("Added README file")
-                            mastodon: "dragnucs@touha.me"
-                            mail: "touhami@touha.me"
-                        }
                     }
 
                     Item {
@@ -214,7 +204,7 @@ Page {
                             }
                             onClicked: {
                                 if (model.mastodon !== ""){
-                                    var m = Qt.createQmlObject('import QtQuick 2.0; ListModel {   }', Qt.application, 'InternalQmlObject');
+                                    var m = Qt.createQmlObject('import QtQuick 2.0; ListModel { }', Qt.application, 'InternalQmlObject');
                                     pageStack.push(Qt.resolvedUrl("ConversationPage.qml"), {
                                                        headerTitle: "Mention",
                                                        description: '@'+model.mastodon,
@@ -253,5 +243,4 @@ Page {
             }
         }
     }
-
 }

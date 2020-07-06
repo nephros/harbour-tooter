@@ -9,8 +9,6 @@ SilicaListView {
 
     property string type
     property string title
-    property string vwPlaceholderText: qsTr("Loading")
-    property string vwPlaceholderHint: qsTr("please wait...")
     property string description
     property ListModel mdl: []
     property variant params: []
@@ -29,7 +27,6 @@ SilicaListView {
     onNotify: {
         console.log(what + " - " + num)
     }
-
     signal openDrawer (bool setDrawer)
     onOpenDrawer: {
         //console.log("Open drawer: " + setDrawer)
@@ -38,7 +35,6 @@ SilicaListView {
     onSend: {
         console.log("LIST send signal emitted with notice: " + notice)
     }
-
 
     header: PageHeader {
         title: myList.title
@@ -54,13 +50,16 @@ SilicaListView {
     ViewPlaceholder {
         id: viewPlaceHolder
         enabled: model.count === 0
-        text: vwPlaceholderText
-        hintText: vwPlaceholderHint
+        text: qsTr("Loading")
+        hintText: qsTr("please wait...")
+        anchors.centerIn: parent
     }
 
     PullDownMenu {
+
         MenuItem {
             text: qsTr("Settings")
+            visible: !profilePage
             onClicked: {
                 pageStack.push(Qt.resolvedUrl("../SettingsPage.qml"), {})
             }
@@ -68,6 +67,7 @@ SilicaListView {
 
         MenuItem {
             text: qsTr("New Toot")
+            visible: !profilePage
             onClicked: {
                 pageStack.push(Qt.resolvedUrl("../ConversationPage.qml"), {
                                    headerTitle: qsTr("New Toot"),
@@ -77,7 +77,15 @@ SilicaListView {
         }
 
         MenuItem {
-            text: qsTr("Load more")
+            text: qsTr("Open in Browser")
+            visible: !mainPage
+            onClicked: {
+                Qt.openUrlExternally(url)
+            }
+        }
+
+        MenuItem {
+            text: qsTr("Reload")
             onClicked: {
                 loadData("prepend")
             }
@@ -101,7 +109,7 @@ SilicaListView {
         console.log("CountChanged!")*/
     }
 
-    footer: Item{
+    footer: Item {
         visible: autoLoadMore
         width: parent.width
         height: Theme.itemSizeLarge
@@ -180,7 +188,8 @@ SilicaListView {
             'model'     : model,
             'mode'      : mode,
             'conf'      : Logic.conf
-        };
+        }
+
         console.log(JSON.stringify(msg))
         if (type !== "")
             worker.sendMessage(msg)

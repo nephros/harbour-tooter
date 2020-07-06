@@ -12,7 +12,7 @@ Item {
     property string bg: ""
 
     width: parent.width
-    height: avatarImage.height + Theme.paddingLarge*3 + infoLbl.height
+    height: isPortrait ? (avatarImage.height + Theme.paddingLarge*3 + infoLbl.height) : (avatarImage.height + Theme.paddingLarge*2.5 + infoLbl.height)
 
     Rectangle {
         id: bgImage
@@ -35,11 +35,9 @@ Item {
         id: avatarImage
         asynchronous: true
         source: if (avatarImage.status === Image.Error)
-                    source = "../../images/icon-l-profile.svg?" + (pressed
-                                                                   ? Theme.highlightColor
-                                                                   : Theme.primaryColor)
+                    source = "../../images/icon-l-profile.svg?" + Theme.primaryColor
                 else image
-        width: Theme.iconSizeLarge
+        width: isPortrait ? Theme.iconSizeLarge : Theme.iconSizeExtraLarge
         height: width
         anchors {
             left: parent.left
@@ -96,7 +94,7 @@ Item {
             color: Theme.secondaryHighlightColor
             truncationMode: TruncationMode.Fade
             width: parent.width
-            height: description === "" ? 0 : contentHeight
+            height: contentHeight
             horizontalAlignment: Text.AlignRight
         }
     }
@@ -108,7 +106,7 @@ Item {
         height: followed_by || locked || bot || group ? Theme.iconSizeSmall + Theme.paddingSmall : 0
         anchors {
             top: avatarImage.bottom
-            topMargin: Theme.paddingMedium
+            topMargin: isPortrait ? Theme.paddingMedium : 0
             left: parent.left
             leftMargin: Theme.horizontalPageMargin
             right: parent.right
@@ -183,8 +181,10 @@ Item {
                 text: qsTr("Bot")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.primaryColor
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
             }
         }
     }

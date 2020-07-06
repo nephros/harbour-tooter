@@ -29,15 +29,13 @@
     </message>
     <message>
         <source>Write your warning here</source>
+        <extracomment>placeholderText in Toot content warning panel</extracomment>
         <translation>Inhaltswarnung</translation>
     </message>
     <message>
         <source>What&apos;s on your mind?</source>
+        <extracomment>placeholderText in Toot text panel</extracomment>
         <translation>Was gibt&apos;s Neues?</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Löschen</translation>
     </message>
     <message>
         <source>Public</source>
@@ -128,8 +126,12 @@
         <translation>Benachrichtigungen</translation>
     </message>
     <message>
-        <source>New Toot</source>
-        <translation>Neuer Toot</translation>
+        <source>Local</source>
+        <translation>Lokal</translation>
+    </message>
+    <message>
+        <source>Federated</source>
+        <translation>Föderiert</translation>
     </message>
     <message>
         <source>Search</source>
@@ -140,12 +142,8 @@
         <translation>@Benutzer oder #Ausdruck</translation>
     </message>
     <message>
-        <source>Local</source>
-        <translation>Lokal</translation>
-    </message>
-    <message>
-        <source>Federated</source>
-        <translation>Föderation</translation>
+        <source>New Toot</source>
+        <translation>Neuer Toot</translation>
     </message>
 </context>
 <context>
@@ -173,10 +171,6 @@
 <context>
     <name>MyList</name>
     <message>
-        <source>Load more</source>
-        <translation>Lade mehr</translation>
-    </message>
-    <message>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
@@ -191,6 +185,14 @@
     <message>
         <source>New Toot</source>
         <translation>Neuer Toot</translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation>Neu laden</translation>
+    </message>
+    <message>
+        <source>Open in Browser</source>
+        <translation>Im Browser öffnen</translation>
     </message>
 </context>
 <context>
@@ -231,6 +233,10 @@
         <translation>Beiträge</translation>
     </message>
     <message>
+        <source>Mention</source>
+        <translation>Erwähnen</translation>
+    </message>
+    <message>
         <source>Unfollow</source>
         <extracomment>Is a button. Keep it as short as possible.</extracomment>
         <translation>Entfolgen</translation>
@@ -248,7 +254,7 @@
     <message>
         <source>Unmute</source>
         <extracomment>Is a button. Keep it as short as possible.</extracomment>
-        <translation>Nicht stumm schalten</translation>
+        <translation>Nicht stumm</translation>
     </message>
     <message>
         <source>Mute</source>
@@ -258,20 +264,12 @@
     <message>
         <source>Unblock</source>
         <extracomment>Is a button. Keep it as short as possible.</extracomment>
-        <translation>Nicht blockieren</translation>
+        <translation>Zulassen</translation>
     </message>
     <message>
         <source>Block</source>
         <extracomment>Is a button. Keep it as short as possible.</extracomment>
         <translation>Blockieren</translation>
-    </message>
-    <message>
-        <source>Open in Browser</source>
-        <translation>Im Browser öffnen</translation>
-    </message>
-    <message>
-        <source>Mention</source>
-        <translation>Erwähnen</translation>
     </message>
 </context>
 <context>

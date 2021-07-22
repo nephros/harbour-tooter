@@ -40,12 +40,16 @@ var mastodonAPI = function(config) {
             for (var i in queryData) {
                 if (queryData.hasOwnProperty(i)) {
                     if (typeof queryData[i] === "string") {
-                        queryStringAppend += queryData[i] + "&";
+                        queryStringAppend += queryData[i];
                     } else if (typeof queryData[i] === "object") {
-                        queryStringAppend += queryData[i].name + "="+ queryData[i].data + "&";
+                        queryStringAppend += queryData[i].name + "="+ queryData[i].data;
                     }
+                    if (i !== queryData.length - 1) queryStringAppend += "&";
                 }
             }
+            // get rid of empty request parameter, actually causes a 500 error on some instances.
+            if (queryStringAppend === "?") queryStringAppend = "";
+
             // ajax function
             var http = new XMLHttpRequest()
             var url = apiBase + endpoint;

@@ -49,11 +49,12 @@ var mastodonAPI = function(config) {
             }
             // get rid of empty request parameter, actually causes a 500 error on some instances.
             //if (queryStringAppend === "?") queryStringAppend = "";
+            if (queryStringAppend === "") queryStringAppend = "?";
 
             // ajax function
             var http = new XMLHttpRequest()
             var url = apiBase + endpoint;
-            console.log(queryStringAppend)
+            console.log("query string: ", queryStringAppend);
             http.open("GET", apiBase + endpoint + queryStringAppend, true);
 
             // Send the proper header information along with the request

@@ -16,7 +16,7 @@ Summary:    Tooter
 Version:    1.0.4.1
 Release:    1
 Group:      Qt/Qt
-License:    LICENSE
+License:    GPLv3
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-tooter.yaml
